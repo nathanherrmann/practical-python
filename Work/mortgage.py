@@ -18,5 +18,6 @@ while principal > 0:
     elif month > 12:
         principal = principal * (1+rate/12) - base_payment
         total_paid = total_paid + base_payment
+    month = month + 1
 
 print('Total paid:', locale.currency(total_paid, grouping=True))
