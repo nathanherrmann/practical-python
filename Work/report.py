@@ -5,7 +5,7 @@
 import csv
 
 def read_portfolio(filename):
-    portfolio = []
+    portfolio = [] 
     with open(filename, 'rt') as f:
         rows = csv.reader(f)
         headers = next(rows)
@@ -14,3 +14,13 @@ def read_portfolio(filename):
             portfolio.append(holding)
     return portfolio
 
+
+def read_prices(filename):
+    try:
+        f = open(filename, 'r')
+        rows = csv.reader(f)
+        for row in rows:
+            print(row)
+
+    except:
+        print('There was an error')
